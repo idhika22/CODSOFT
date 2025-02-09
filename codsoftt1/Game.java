@@ -1,7 +1,6 @@
 
-
 import java.util.Random;
-public class Game {
+public class Game  {
     private int minRange;
     private int maxRange;
     private int numberToGuess;
@@ -17,11 +16,13 @@ public class Game {
         
     }
 
+    
     public void generateNumber(){
         Random random=new Random();
         numberToGuess=random.nextInt(maxRange-minRange+1)+minRange;
     }
 
+    
     public boolean guessNumber(int guess){
         AttemptsLeft--;
         if(guess<numberToGuess){
